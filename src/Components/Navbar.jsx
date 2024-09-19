@@ -10,7 +10,7 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const sections = document.querySelectorAll('section');
-      const scrollPosition = window.scrollY;
+      const scrollPosition = window.scrollY + navbarHeight + 50; 
 
       sections.forEach((section) => {
         if (
