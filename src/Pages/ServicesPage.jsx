@@ -72,7 +72,7 @@ const ServicePage = () => {
                 <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
                 <p className="text-lg mb-6">{service.description}</p>
                 <Link
-                  to="contactus"
+                  to="contact"
                   smooth={true}
                   duration={500}
                   className="bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md mt-4 inline-block transition-transform transform hover:scale-105"
