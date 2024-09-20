@@ -86,36 +86,38 @@ const ContactUsPage = () => {
         </motion.div>
         
         <motion.div
-          className="relative"
-          variants={fadeInUp}
-          initial="hidden"
-          animate={inViewMap ? "visible" : "hidden"}
-          transition={{ duration: 1, delay: 0.6 }}
-          ref={refMap}
-        >
-          <h3 className="text-xl sm:text-2xl font-semibold mb-4 text-center">Find Us Here</h3>
-          <iframe
-            src="https://www.openstreetmap.org/export/embed.html?bbox=74.7529,13.3350,74.7581,13.3404&layer=mapnik"
-            width="100%"
-            height="300"
-            style={{ border: 0 }}
-            allowFullScreen=""
-            loading="lazy"
-            title="Our Location"
-            className="cursor-pointer"
-            onClick={() => window.open('https://www.openstreetmap.org/?mlat=13.3377&mlon=74.7555#map=16/13.3377/74.7555', '_blank')}
-          ></iframe>
-          <div className="text-center mt-4">
-            <a
-              href="https://www.openstreetmap.org/?mlat=13.3377&mlon=74.7555#map=16/13.3377/74.7555"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-600 hover:underline"
-            >
-              View on OpenStreetMap
-            </a>
-          </div>
-        </motion.div>
+  className="relative"
+  variants={fadeInUp}
+  initial="hidden"
+  animate={inViewMap ? "visible" : "hidden"}
+  transition={{ duration: 1, delay: 0.6 }}
+  ref={refMap}
+>
+  <h3 className="text-xl sm:text-2xl font-semibold mb-4 text-center">Find Us Here</h3>
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15528.840310377242!2d74.72005869538539!3d13.337204342202645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbcbb9c568fd461%3A0x312b781c00fe42b1!2sAmbalpadi%2C%20Udupi%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1726836492593!5m2!1sen!2sin"
+    width="100%"
+    height="450"
+    style={{ border: 0 }}
+    allowFullScreen=""
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+    title="Our Location"
+    className="cursor-pointer"
+    onClick={() => window.open('https://goo.gl/maps/4VC8E9JsSp1AMGSA8', '_blank')}
+  ></iframe>
+  <div className="text-center mt-4">
+    <a
+      href="https://goo.gl/maps/4VC8E9JsSp1AMGSA8"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-blue-600 hover:underline"
+    >
+      View on Google Maps
+    </a>
+  </div>
+</motion.div>
+
       </div>
     </section>
   );
