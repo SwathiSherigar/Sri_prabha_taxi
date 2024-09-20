@@ -59,7 +59,9 @@ export default function Footer() {
             <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start text-xl">Useful Links</h6>
             <p className="mb-4"><Link to="/terms" className="text-neutral-300 hover:underline">Terms and Conditions</Link></p>
             <p className="mb-4 cursor-pointer text-neutral-300 hover:underline" onClick={() => handleScrollToSection('contact')}>Contact Us</p>
-            <p className="mb-4"><Link to="/privacy" className="text-neutral-300 hover:underline">Privacy Policy</Link></p>
+            <a href="tel:9945439756" className="text-gray-400 hover:text-white">
+      Support/Help Center
+    </a>                                 
           </div>
 
           {/* Location & Contact Section */}
