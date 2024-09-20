@@ -85,7 +85,7 @@ const Navbar = () => {
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo with Padding */}
         <div className="flex items-center">
-          <div className="pr-8 pl-8"> {/* Padding before the logo */}
+          <div className="pr-6"> {/* Padding before the logo */}
             <img src={logo} alt="Logo" className="h-8 w-auto" />
           </div>
 
