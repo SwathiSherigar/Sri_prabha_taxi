@@ -142,57 +142,116 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      <div className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'} bg-gray-800`}>
-        <ul className="flex flex-col items-center py-4 space-y-2">
-          {isHome ? (
-            <>
-              <li>
-                <ScrollLink to="home" smooth={true} duration={500} offset={-navbarHeight} className={`block px-4 py-2 ${activeSection === 'home' ? 'text-yellow-500' : 'text-gray-400'} text-sm`} onClick={() => setIsMenuOpen(false)}>
-                  Home
-                </ScrollLink>
-              </li>
-              <li>
-                <ScrollLink to="about" smooth={true} duration={500} offset={-navbarHeight} className={`block px-4 py-2 ${activeSection === 'about' ? 'text-yellow-500' : 'text-gray-400'} text-sm`} onClick={() => setIsMenuOpen(false)}>
-                  About
-                </ScrollLink>
-              </li>
-              <li>
-                <ScrollLink to="services" smooth={true} duration={500} offset={-navbarHeight} className={`block px-4 py-2 ${activeSection === 'services' ? 'text-yellow-500' : 'text-gray-400'} text-sm`} onClick={() => setIsMenuOpen(false)}>
-                  Services
-                </ScrollLink>
-              </li>
-              <li>
-                <ScrollLink to="contact" smooth={true} duration={500} offset={-navbarHeight} className={`block px-4 py-2 ${activeSection === 'contact' ? 'text-yellow-500' : 'text-gray-400'} text-sm`} onClick={() => setIsMenuOpen(false)}>
-                  Contact
-                </ScrollLink>
-              </li>
-            </>
-          ) : (
-            <>
-              <li>
-                <RouterLink to="/" className={`block px-4 py-2 ${location.pathname === '/' ? 'text-yellow-500' : 'text-gray-400'} text-sm`} onClick={() => setIsMenuOpen(false)}>
-                  Home
-                </RouterLink>
-              </li>
-              <li>
-                <button onClick={() => navigateAndScroll('about')} className={`block px-4 py-2 ${location.pathname === '/about' ? 'text-yellow-500' : 'text-gray-400'} text-sm`} onClick={() => setIsMenuOpen(false)}>
-                  About
-                </button>
-              </li>
-              <li>
-                <button onClick={() => navigateAndScroll('services')} className={`block px-4 py-2 ${location.pathname === '/services' ? 'text-yellow-500' : 'text-gray-400'} text-sm`} onClick={() => setIsMenuOpen(false)}>
-                  Services
-                </button>
-              </li>
-              <li>
-                <button onClick={() => navigateAndScroll('contact')} className={`block px-4 py-2 ${location.pathname === '/contact' ? 'text-yellow-500' : 'text-gray-400'} text-sm`} onClick={() => setIsMenuOpen(false)}>
-                  Contact
-                </button>
-              </li>
-            </>
-          )}
-        </ul>
-      </div>
+<div className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'} bg-gray-800`}>
+  <ul className="flex flex-col items-center py-4 space-y-2">
+    {isHome ? (
+      <>
+        <li>
+          <ScrollLink 
+            to="home" 
+            smooth={true} 
+            duration={500} 
+            offset={-navbarHeight} 
+            className={`block px-4 py-2 ${activeSection === 'home' ? 'text-yellow-500' : 'text-gray-400'} text-sm`} 
+            onClick={() => {
+              setTimeout(() => setIsMenuOpen(false), 500); // Close after scroll
+            }}
+          >
+            Home
+          </ScrollLink>
+        </li>
+        <li>
+          <ScrollLink 
+            to="about" 
+            smooth={true} 
+            duration={500} 
+            offset={-navbarHeight} 
+            className={`block px-4 py-2 ${activeSection === 'about' ? 'text-yellow-500' : 'text-gray-400'} text-sm`} 
+            onClick={() => {
+              setTimeout(() => setIsMenuOpen(false), 500); // Close after scroll
+            }}
+          >
+            About
+          </ScrollLink>
+        </li>
+        <li>
+          <ScrollLink 
+            to="services" 
+            smooth={true} 
+            duration={500} 
+            offset={-navbarHeight} 
+            className={`block px-4 py-2 ${activeSection === 'services' ? 'text-yellow-500' : 'text-gray-400'} text-sm`} 
+            onClick={() => {
+              setTimeout(() => setIsMenuOpen(false), 500); // Close after scroll
+            }}
+          >
+            Services
+          </ScrollLink>
+        </li>
+        <li>
+          <ScrollLink 
+            to="contact" 
+            smooth={true} 
+            duration={500} 
+            offset={-navbarHeight} 
+            className={`block px-4 py-2 ${activeSection === 'contact' ? 'text-yellow-500' : 'text-gray-400'} text-sm`} 
+            onClick={() => {
+              setTimeout(() => setIsMenuOpen(false), 500); // Close after scroll
+            }}
+          >
+            Contact
+          </ScrollLink>
+        </li>
+      </>
+    ) : (
+      <>
+        <li>
+          <RouterLink 
+            to="/" 
+            className={`block px-4 py-2 ${location.pathname === '/' ? 'text-yellow-500' : 'text-gray-400'} text-sm`} 
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Home
+          </RouterLink>
+        </li>
+        <li>
+          <button 
+            onClick={() => {
+              navigateAndScroll('about');
+              setIsMenuOpen(false);
+            }} 
+            className={`block px-4 py-2 ${location.pathname === '/about' ? 'text-yellow-500' : 'text-gray-400'} text-sm`}
+          >
+            About
+          </button>
+        </li>
+        <li>
+          <button 
+            onClick={() => {
+              navigateAndScroll('services');
+              setIsMenuOpen(false);
+            }} 
+            className={`block px-4 py-2 ${location.pathname === '/services' ? 'text-yellow-500' : 'text-gray-400'} text-sm`}
+          >
+            Services
+          </button>
+        </li>
+        <li>
+          <button 
+            onClick={() => {
+              navigateAndScroll('contact');
+              setIsMenuOpen(false);
+            }} 
+            className={`block px-4 py-2 ${location.pathname === '/contact' ? 'text-yellow-500' : 'text-gray-400'} text-sm`}
+          >
+            Contact
+          </button>
+        </li>
+      </>
+    )}
+  </ul>
+</div>
+
     </nav>
   );
 };
