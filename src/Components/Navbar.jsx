@@ -55,7 +55,13 @@ const Navbar = () => {
       });
     }
   };
-
+  const handleLogoClick = () => {
+    if (!isHome) {
+      navigate('/');
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
   useEffect(() => {
     if (isHome && location.state && location.state.scrollTo) {
       scroller.scrollTo(location.state.scrollTo, {
@@ -71,7 +77,7 @@ const Navbar = () => {
       <div className="container mx-auto flex items-center justify-between">
         <div className="flex items-center">
           <div className="pr-6">
-            <img src={logo} alt="Logo" className="h-8 w-auto" />
+            <img src={logo} alt="Logo" className="h-8 w-auto" onClick={handleLogoClick} />
           </div>
           <motion.div className="flex flex-col items-start" initial="hidden" animate="visible">
             <motion.h1 className="text-xl font-bold text-white tracking-wide">Sri Prabha</motion.h1>

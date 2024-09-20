@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaFacebookF, FaInstagram, FaWhatsapp, FaTwitter, FaLinkedin } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+
 export default function Footer() {
   const handleScrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -39,19 +40,34 @@ export default function Footer() {
 
       <div className="mx-6 py-10 text-center md:text-left">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+          {/* About Us Section */}
           <div>
             <h6 className="mb-4 flex items-center justify-center font-semibold uppercase md:justify-start text-xl">About Us</h6>
-            <p>We provide reliable taxi booking services...</p>
+            <p>We provide reliable taxi booking services that ensure a safe and comfortable journey to your destination...</p>
           </div>
+
+          {/* Our Services Section */}
           <div>
             <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start text-xl">Our Services</h6>
             <p className="mb-4"><a href="/services/innova-crysta" className="text-neutral-300 hover:underline">Innova Crysta</a></p>
             <p className="mb-4"><a href="/services/etios" className="text-neutral-300 hover:underline">Etios</a></p>
+            <p className="mb-4"><a href="/services/suv" className="text-neutral-300 hover:underline">SUV</a></p>
           </div>
+
+          {/* Useful Links Section */}
           <div>
             <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start text-xl">Useful Links</h6>
             <p className="mb-4"><Link to="/terms" className="text-neutral-300 hover:underline">Terms and Conditions</Link></p>
             <p className="mb-4 cursor-pointer text-neutral-300 hover:underline" onClick={() => handleScrollToSection('contact')}>Contact Us</p>
+            <p className="mb-4"><Link to="/privacy" className="text-neutral-300 hover:underline">Privacy Policy</Link></p>
+          </div>
+
+          {/* Location & Contact Section */}
+          <div>
+            <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start text-xl">Contact & Location</h6>
+            <p className="mb-4"><span className="font-semibold">Address:</span> 1234 Main St, City, Country</p>
+            <p className="mb-4"><span className="font-semibold">Phone:</span> +1 234 567 890</p>
+            <p className="mb-4"><span className="font-semibold">Email:</span> info@taxibooking.com</p>
           </div>
         </div>
       </div>
