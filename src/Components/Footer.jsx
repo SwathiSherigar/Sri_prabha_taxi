@@ -49,9 +49,9 @@ export default function Footer() {
           {/* Our Services Section */}
           <div>
             <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start text-xl">Our Services</h6>
-            <p className="mb-4"><a href="/services/innova-crysta" className="text-neutral-300 hover:underline">Innova Crysta</a></p>
-            <p className="mb-4"><a href="/services/etios" className="text-neutral-300 hover:underline">Etios</a></p>
-            <p className="mb-4"><a href="/services/suv" className="text-neutral-300 hover:underline">SUV</a></p>
+            <p className="mb-4 cursor-pointer text-neutral-300 hover:underline" onClick={() => handleScrollToSection('services')}>Innova</p>
+            <p className="mb-4 cursor-pointer text-neutral-300 hover:underline" onClick={() => handleScrollToSection('services')}>Etios</p>
+            <p className="mb-4 cursor-pointer text-neutral-300 hover:underline" onClick={() => handleScrollToSection('services')}>Crysta</p>
           </div>
 
           {/* Useful Links Section */}
