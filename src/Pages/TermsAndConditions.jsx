@@ -15,7 +15,7 @@ const TermsAndConditions = () => {
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-3 text-gray-800">1. Introduction</h2>
           <p className="text-lg leading-relaxed text-gray-700">
-            Welcome to [Your Company Name]. By accessing or using our taxi booking service, you agree to comply with and be bound by the following terms and conditions. Please read these terms carefully.
+            Welcome to Sri Prabha Tours & Travel. By accessing or using our taxi booking service, you agree to comply with and be bound by the following terms and conditions. Please read these terms carefully.
           </p>
         </section>
 
@@ -50,7 +50,7 @@ const TermsAndConditions = () => {
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-3 text-gray-800">6. Limitation of Liability</h2>
           <p className="text-lg leading-relaxed text-gray-700">
-            [Your Company Name] is not liable for any direct, indirect, incidental, or consequential damages resulting from the use of our service. Our liability is limited to the extent permitted by law.
+          Sri Prabha Tours & Travel is not liable for any direct, indirect, incidental, or consequential damages resulting from the use of our service. Our liability is limited to the extent permitted by law.
           </p>
         </section>
 
@@ -64,12 +64,12 @@ const TermsAndConditions = () => {
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-3 text-gray-800">8. Contact Information</h2>
           <p className="text-lg leading-relaxed text-gray-700">
-            If you have any questions or concerns regarding these terms and conditions, please contact us at [Your Contact Information].
+            If you have any questions or concerns regarding these terms and conditions, please contact us at Ambalapady, N.J.-66 Udupi-576101.
           </p>
         </section>
 
         <footer className="border-t pt-4 text-center text-sm text-gray-600">
-          <p>&copy; [Year] [Your Company Name]. All rights reserved.</p>
+          <p>&copy; 2024 Sri Prabha Tours & Travel. All rights reserved.</p>
         </footer>
       </div>
     </div>
