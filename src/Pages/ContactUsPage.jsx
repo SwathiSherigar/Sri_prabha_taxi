@@ -103,12 +103,10 @@ const ContactUsPage = () => {
     loading="lazy"
     referrerPolicy="no-referrer-when-downgrade"
     title="Our Location"
-    className="cursor-pointer"
-    onClick={() => window.open('https://goo.gl/maps/4VC8E9JsSp1AMGSA8', '_blank')}
   ></iframe>
   <div className="text-center mt-4">
     <a
-      href="https://goo.gl/maps/4VC8E9JsSp1AMGSA8"
+      href="https://www.google.com/maps/place/Ambalpadi,+Udupi,+Karnataka/@13.3372043,74.7200587,17z/data=!3m1!4b1!4m6!3m5!1s0x3bbcbb9c568fd461:0x312b781c00fe42b1!8m2!3d13.3372043!4d74.7200587!16s%2Fg%2F11b6_v3w5r"
       target="_blank"
       rel="noopener noreferrer"
       className="text-blue-600 hover:underline"
@@ -117,6 +115,7 @@ const ContactUsPage = () => {
     </a>
   </div>
 </motion.div>
+
 
       </div>
     </section>
