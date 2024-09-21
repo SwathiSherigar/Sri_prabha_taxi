@@ -2,11 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { scroller } from 'react-scroll'; // Import scroller for smooth scrolling
 
-import image1 from '../assets/1.jpeg';
-import image2 from '../assets/2.jpeg';
-import image3 from '../assets/3.jpeg';
-
-const images = [image1, image2, image3];
+import image1 from '../assets/a5.jpg';
+import image2 from '../assets/11.jpg';
+import image3 from '../assets/a1.jpg';
+import image4 from '../assets/a2.jpg';
+import image5 from '../assets/128.jpg';
+// import image6 from '../assets/a4.jpg';
+// import image7 from '../assets/a1.jpg';
+const images = [image1, image2, image3,image4,image5];
 
 export default function HeroTaxi() {
   const [currentImage, setCurrentImage] = useState(0);
@@ -56,7 +59,7 @@ export default function HeroTaxi() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Ride with <span className="text-yellow-400">Ease</span>, Ride with <span className="text-yellow-400">Us</span>
+          Ride with <span className="text-blue-400">Ease</span>, Ride with <span className="text-blue-400">Us</span>
         </motion.h1>
 
         <motion.h3
@@ -85,12 +88,12 @@ export default function HeroTaxi() {
         >
           <button
             onClick={scrollToNextSection}
-            className="bg-yellow-400 hover:bg-yellow-500 text-black font-medium py-3 px-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105"
+            className="bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 px-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105"
           >
             Book Your Ride Now
           </button>
 
-          {/*  animated taxi icon */}
+          {/* Animated taxi icon */}
           <AnimatedTaxiIcon />
         </motion.div>
       </div>
@@ -122,7 +125,7 @@ function AnimatedTaxiIcon() {
         strokeLinecap="round"
         strokeLinejoin="round"
       />
-      <rect x="6" y="10" width="12" height="6" rx="3" fill="yellow" />
+      <rect x="6" y="10" width="12" height="6" rx="3" fill="blue" />
       <circle cx="7" cy="16" r="1.5" fill="white" />
       <circle cx="17" cy="16" r="1.5" fill="white" />
     </motion.svg>
