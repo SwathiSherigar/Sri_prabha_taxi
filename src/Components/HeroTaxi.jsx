@@ -7,9 +7,8 @@ import image2 from '../assets/11.jpg';
 import image3 from '../assets/a1.jpg';
 import image4 from '../assets/a2.jpg';
 import image5 from '../assets/128.jpg';
-// import image6 from '../assets/a4.jpg';
-// import image7 from '../assets/a1.jpg';
-const images = [image1, image2, image3,image4,image5];
+
+const images = [image1, image2, image3, image4, image5];
 
 export default function HeroTaxi() {
   const [currentImage, setCurrentImage] = useState(0);
@@ -23,7 +22,6 @@ export default function HeroTaxi() {
   }, []);
 
   const scrollToNextSection = () => {
-    // Scroll to the 'services' section smoothly
     scroller.scrollTo('services', {
       duration: 800,
       delay: 0,
@@ -33,8 +31,8 @@ export default function HeroTaxi() {
   };
 
   return (
-    <section className="relative flex justify-center items-center h-screen bg-gray-900 overflow-hidden" id="home">
-      {/* Dynamic background image transition */}
+    <section className="relative flex justify-center items-center h-screen overflow-hidden" id="home">
+      {/* Dynamic image transition */}
       <AnimatePresence>
         {images.map((image, index) => (
           index === currentImage && (
@@ -42,11 +40,16 @@ export default function HeroTaxi() {
               key={image}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }} // Optional: Adjust if needed
+              exit={{ opacity: 0 }}
               transition={{ duration: 1 }}
-              className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: `url(${image})` }} // Fix template literal usage
-            />
+              className="absolute inset-0"
+            >
+              <img
+                src={image}
+                alt="Taxi Service"
+                className="w-full h-full object-cover" // Ensures image covers the container
+              />
+            </motion.div>
           )
         ))}
       </AnimatePresence>

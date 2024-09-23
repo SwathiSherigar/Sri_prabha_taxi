@@ -4,7 +4,7 @@ import { useInView } from 'react-intersection-observer';
 import { Link } from 'react-scroll';
 import car1 from '../assets/1.jpeg';
 import car2 from '../assets/2.jpeg';
-import car3 from '../assets/3.jpeg';
+import car3 from '../assets/tempog.jpg';
 
 const services = [
   {
@@ -75,6 +75,7 @@ const ServicePage = () => {
                   to="contact"
                   smooth={true}
                   duration={500}
+                  offset={-70}
                   className="bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md mt-4 inline-block transition-transform transform hover:scale-105"
                 >
                   Book Now
