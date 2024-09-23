@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { scroller } from 'react-scroll'; // Import scroller for smooth scrolling
 
-import image1 from '../assets/a5.jpg';
-import image2 from '../assets/11.jpg';
-import image3 from '../assets/a1.jpg';
-import image4 from '../assets/a2.jpg';
+import image1 from '../assets/b3.jpg';
+import image2 from '../assets/b9.jpg';
+import image3 from '../assets/b11.jpg';
+import image4 from '../assets/b10.jpg';
 import image5 from '../assets/128.jpg';
 
 const images = [image1, image2, image3, image4, image5];
