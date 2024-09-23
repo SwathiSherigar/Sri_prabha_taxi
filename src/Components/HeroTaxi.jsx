@@ -8,7 +8,7 @@ import image3 from '../assets/b11.jpg';
 import image4 from '../assets/b10.jpg';
 import image5 from '../assets/128.jpg';
 
-const images = [image1, image2, image3, image4, image5];
+const images = [image1, image3, image4, image2, image5];
 
 export default function HeroTaxi() {
   const [currentImage, setCurrentImage] = useState(0);
