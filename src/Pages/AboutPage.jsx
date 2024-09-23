@@ -4,7 +4,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import car1 from '../assets/1.jpeg';
+import car1 from '../assets/innova.jpg';
 import car2 from '../assets/2.jpeg';
 import car3 from '../assets/3.jpeg';
 
@@ -58,7 +58,7 @@ export default function AboutPage() {
   transition={{ duration: 1.5, ease: "easeOut" }}
 >
   With over <span className="font-bold text-blue-600">500+ satisfied passengers</span> and a diverse fleet of vehicles, 
-  including the elegant <span className="font-bold text-blue-600">Innova Crysta</span>, the sleek <span className="font-bold text-blue-600">Etios</span>, 
+  including the elegant <span className="font-bold text-blue-600">Innova, Crysta</span>, the sleek <span className="font-bold text-blue-600">Etios</span>, 
   the spacious <span className="font-bold text-blue-600">Tempo Traveller</span>, and our comfortable <span className="font-bold text-blue-600">Tourist Bus</span>, 
   we offer unparalleled comfort and reliability for every journey. Whether you're traveling solo or with a group, we have the perfect ride for you. 
   Contact us today to experience luxury and convenience like never before.
@@ -78,7 +78,7 @@ export default function AboutPage() {
               <div className="relative rounded-3xl overflow-hidden shadow-lg">
                 <img src={car1} alt="Stylish Sedan" className="w-full h-[24rem] md:h-[34rem] object-cover rounded-3xl" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black opacity-50 rounded-3xl"></div>
-                <p className="absolute bottom-0 left-0 p-4 text-white text-xl font-bold rounded-b-3xl">Stylish Sedan</p>
+                <p className="absolute bottom-0 left-0 p-4 text-white text-xl font-bold rounded-b-3xl">Innova</p>
               </div>
             </div>
             <div className="px-4">
