@@ -5,10 +5,10 @@ import { scroller } from 'react-scroll'; // Import scroller for smooth scrolling
 import image1 from '../assets/b3.jpg';
 import image2 from '../assets/b9.jpg';
 import image3 from '../assets/b11.jpg';
-// import image4 from '../assets/b10.jpg';
-import image5 from '../assets/128.jpg';
+import image4 from '../assets/b10.jpg';
+// import image5 from '../assets/128.jpg';
 
-const images = [image1, image3,  image2, image5];
+const images = [image1, image3,  image2, image4];
 
 export default function HeroTaxi() {
   const [currentImage, setCurrentImage] = useState(0);
