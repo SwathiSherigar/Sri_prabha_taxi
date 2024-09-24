@@ -65,14 +65,15 @@ const ContactUsPage = () => {
               <span className="text-lg">+91 9945439756 </span>
             </motion.a>
             <motion.a
-              href="mailto:sriprabhatoursndtravels@gmail.com"
-              className="flex items-center text-blue-600 hover:text-blue-800 transition"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <FaEnvelope className="text-xl sm:text-3xl mr-2" />
-              <span className="text-lg">sriprabhatoursndtravels@gmail.com</span>
-            </motion.a>
+  href="mailto:sriprabhatoursndtravels@gmail.com"
+  className="flex items-center text-blue-600 hover:text-blue-800 transition"
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+>
+  <FaEnvelope className="text-xl sm:text-3xl mr-2 flex-shrink-0" />
+  <span className="text-lg truncate">sriprabhatoursndtravels@gmail.com</span>
+</motion.a>
+
             <motion.a
   href="sms:918867453203"
   className="flex items-center text-blue-600 hover:text-blue-800 transition"
