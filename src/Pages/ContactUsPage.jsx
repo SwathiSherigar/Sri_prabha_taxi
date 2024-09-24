@@ -56,13 +56,13 @@ const ContactUsPage = () => {
         >
           <div className="flex flex-col sm:flex-row justify-center space-y-6 sm:space-y-0 sm:space-x-8 mb-8">
             <motion.a
-              href="tel:+1234567890"
+              href="tel:+919945439756"
               className="flex items-center text-blue-600 hover:text-blue-800 transition"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               <FaPhone className="text-2xl sm:text-3xl mr-2" />
-              <span className="text-lg">+1 (234) 567-890</span>
+              <span className="text-lg">+91 9945439756 </span>
             </motion.a>
             <motion.a
               href="mailto:info@company.com"
