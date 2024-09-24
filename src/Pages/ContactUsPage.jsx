@@ -65,23 +65,24 @@ const ContactUsPage = () => {
               <span className="text-lg">+91 9945439756 </span>
             </motion.a>
             <motion.a
-              href="mailto:info@company.com"
+              href="mailto:sriprabhatoursndtravels@gmail.com"
               className="flex items-center text-blue-600 hover:text-blue-800 transition"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               <FaEnvelope className="text-2xl sm:text-3xl mr-2" />
-              <span className="text-lg">info@company.com</span>
+              <span className="text-lg">sriprabhatoursndtravels@gmail.com</span>
             </motion.a>
             <motion.a
-              href="mailto:info@company.com"
-              className="flex items-center text-blue-600 hover:text-blue-800 transition"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <FaComments className="text-2xl sm:text-3xl mr-2" />
-              <span className="text-lg">Send Message</span>
-            </motion.a>
+  href="sms:918867453203?body=Hello"
+  className="flex items-center text-blue-600 hover:text-blue-800 transition"
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+>
+  <FaComments className="text-2xl sm:text-3xl mr-2" />
+  <span className="text-lg">Send Message</span>
+</motion.a>
+
           </div>
         </motion.div>
         

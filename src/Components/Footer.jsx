@@ -67,9 +67,9 @@ export default function Footer() {
           {/* Location & Contact Section */}
           <div>
             <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start text-xl">Contact & Location</h6>
-            <p className="mb-4"><span className="font-semibold">Address:</span> 1234 Main St, City, Country</p>
-            <p className="mb-4"><span className="font-semibold">Phone:</span> +1 234 567 890</p>
-            <p className="mb-4"><span className="font-semibold">Email:</span> info@taxibooking.com</p>
+            <p className="mb-4"><span className="font-semibold">Address:</span> Ambalapady, N.H.-66 Udupi-576 101</p>
+            <p className="mb-4"><span className="font-semibold">Phone:</span> +91 9945439756</p>
+            <p className="mb-4"><span className="font-semibold">Email:</span>sriprabhatoursndtravels@gmail.com</p>
           </div>
         </div>
       </div>
