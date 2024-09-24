@@ -2,21 +2,22 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Link } from 'react-scroll';
-import car1 from '../assets/1.jpeg';
-import car2 from '../assets/2.jpeg';
-import car3 from '../assets/tempog.jpg';
-
+import car1 from '../assets/air.jpg';
+// import car2 from '../assets/innovaa.jpg';
+import car3 from '../assets/paalce.jpg';
+import car4 from '../assets/event.jpg';
+import car5 from '../assets/temple.jpg';
 const services = [
   {
     title: "Airport Transfers",
     description: "Comfortable and reliable airport transfers to ensure you reach your destination on time.",
     image: car1
   },
-  {
-    title: "Corporate Travel",
-    description: "Professional travel solutions for businesses, including chauffeur-driven services.",
-    image: car2
-  },
+  // {
+  //   title: "Corporate Travel",
+  //   description: "Professional travel solutions for businesses, including chauffeur-driven services.",
+  //   image: car2
+  // },
   {
     title: "City Tours",
     description: "Explore the city in style with our guided tours and premium transportation.",
@@ -25,8 +26,15 @@ const services = [
   {
     title: "Event Transportation",
     description: "Arrive at your event in elegance with our dedicated transportation services.",
-    image: car1
+    image: car4
   },
+  {
+    "title": "Temple Visits",
+    "description": "Experience spiritual tranquility with guided temple visits to deepen your faith and understanding.",
+    "image": car5
+}
+
+  
 ];
 
 const ServicePage = () => {
