@@ -70,11 +70,11 @@ const ContactUsPage = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <FaEnvelope className="text-2xl sm:text-3xl mr-2" />
+              <FaEnvelope className="text-xl sm:text-3xl mr-2" />
               <span className="text-lg">sriprabhatoursndtravels@gmail.com</span>
             </motion.a>
             <motion.a
-  href="sms:918867453203?body=Hello"
+  href="sms:918867453203"
   className="flex items-center text-blue-600 hover:text-blue-800 transition"
   whileHover={{ scale: 1.05 }}
   whileTap={{ scale: 0.95 }}
