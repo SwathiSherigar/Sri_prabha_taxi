@@ -4,7 +4,7 @@ import { scroller } from 'react-scroll'; // Import scroller for smooth scrolling
 
 import image1 from '../assets/r1.jpeg';
 import image2 from '../assets/b11.jpg';
-// import image3 from '../assets/e11.jpg';
+import image3 from '../assets/e11.jpg';
 // import image4 from '../assets/e5.jpg';
 import image5 from '../assets/128.jpg';
 
@@ -41,7 +41,7 @@ export default function HeroTaxi() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 2 }}
+              transition={{ duration: 1 }}
               className="absolute inset-0"
             >
               <img
