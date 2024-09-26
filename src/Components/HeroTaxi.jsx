@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { scroller } from 'react-scroll'; // Import scroller for smooth scrolling
 
-import image1 from '../assets/r1.jpeg';
+// import image1 from '../assets/r1.jpeg';
 import image2 from '../assets/b11.jpg';
-import image3 from '../assets/e11.jpg';
+// import image3 from '../assets/e11.jpg';
 // import image4 from '../assets/e5.jpg';
 import image5 from '../assets/128.jpg';
 
-const images = [image2, image1,   image5];
+const images = [image2, image5];
 
 export default function HeroTaxi() {
   const [currentImage, setCurrentImage] = useState(0);
