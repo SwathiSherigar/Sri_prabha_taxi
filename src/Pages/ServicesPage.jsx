@@ -2,27 +2,35 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Link } from 'react-scroll';
-import car1 from '../assets/air.jpg';
+import car from '../assets/ses.jpg';
 // import car2 from '../assets/innovaa.jpg';
 import car3 from '../assets/paalce.jpg';
 import car4 from '../assets/event.jpg';
 import car5 from '../assets/temple.jpg';
 const services = [
-  {
-    title: "Airport Transfers",
-    description: "Comfortable and reliable airport transfers to ensure you reach your destination on time.",
-    image: car1
-  },
+  // {
+  //   title: "Airport Transfers",
+  //   description: "Comfortable and reliable airport transfers to ensure you reach your destination on time.",
+  //   image: car1
+  // },
   // {
   //   title: "Corporate Travel",
   //   description: "Professional travel solutions for businesses, including chauffeur-driven services.",
   //   image: car2
   // },
+  // {
+  //   title: "City Tours",
+  //   description: "Explore the city in style with our guided tours and premium transportation.",
+  //   image: car3
+  // },
   {
-    title: "City Tours",
-    description: "Explore the city in style with our guided tours and premium transportation.",
-    image: car3
+    "title":"Heritage Tours",
+  
+  
+  "description": "Step back in time with our guided heritage tours, exploring historic landmarks.",
+  "image": car3
   },
+    
   {
     title: "Event Transportation",
     description: "Arrive at your event in elegance with our dedicated transportation services.",
@@ -32,9 +40,12 @@ const services = [
     "title": "Temple Visits",
     "description": "Experience spiritual tranquility with guided temple visits to deepen your faith and understanding.",
     "image": car5
+},
+{
+"title": "Seasonal Holiday Tours",
+"description": "Celebrate in style all year round! Whether it's a cozy winter retreat or a vibrant summer getaway.",
+image:car
 }
-
-  
 ];
 
 const ServicePage = () => {
@@ -77,7 +88,7 @@ const ServicePage = () => {
               <img src={service.image} alt={service.title} className="w-full h-64 object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black opacity-40"></div>
               <div className="absolute inset-0 p-6 flex flex-col justify-center text-center text-white">
-                <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
+                <h3 className="text-xl font-bold mb-4">{service.title}</h3>
                 <p className="text-lg mb-6">{service.description}</p>
                 <Link
                   to="contact"

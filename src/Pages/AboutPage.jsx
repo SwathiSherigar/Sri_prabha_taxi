@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import car1 from '../assets/innovaa.jpg';
 import car2 from '../assets/cryst.jpg';
-import car3 from '../assets/etiosm.jpg';
+import car3 from '../assets/et6.jpg';
 import temp from '../assets/tempt.jpg';
 import bus from '../assets/bus.jpg';
 // Slider settings
