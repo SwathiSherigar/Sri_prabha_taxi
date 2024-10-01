@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { scroller } from 'react-scroll'; // Import scroller for smooth scrolling
+import { scroller } from 'react-scroll';
 
 // import image1 from '../assets/r1.jpeg';
 import image2 from '../assets/b11.jpg';
@@ -12,14 +12,41 @@ const images = [image2, image5];
 
 export default function HeroTaxi() {
   const [currentImage, setCurrentImage] = useState(0);
+  const [imagesLoaded, setImagesLoaded] = useState(false); // Track if images are preloaded
+
+  // Preload images function
+  const preloadImages = (srcs) => {
+    const promises = srcs.map((src) => {
+      return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.src = src;
+        img.onload = resolve;
+        img.onerror = reject;
+      });
+    });
+    return Promise.all(promises);
+  };
+
+  // Preload images before displaying
+  useEffect(() => {
+    preloadImages(images)
+      .then(() => {
+        setImagesLoaded(true); // Images are preloaded, show the first image
+      })
+      .catch((err) => {
+        console.error('Error preloading images:', err);
+      });
+  }, []);
 
   // Change background image every 5 seconds
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImage((prevImage) => (prevImage + 1) % images.length);
-    }, 5000); // 5 seconds
-    return () => clearInterval(interval);
-  }, []);
+    if (imagesLoaded) {
+      const interval = setInterval(() => {
+        setCurrentImage((prevImage) => (prevImage + 1) % images.length);
+      }, 5000); // 5 seconds
+      return () => clearInterval(interval);
+    }
+  }, [imagesLoaded]);
 
   const scrollToNextSection = () => {
     scroller.scrollTo('services', {
@@ -32,74 +59,79 @@ export default function HeroTaxi() {
 
   return (
     <section className="relative flex justify-center items-center h-screen overflow-hidden" id="home">
-      {/* Dynamic image transition */}
-      <AnimatePresence>
-        {images.map((image, index) => (
-          index === currentImage && (
-            <motion.div
-              key={image}
+      {/* Show content only when images are loaded */}
+      {imagesLoaded && (
+        <>
+          {/* Dynamic image transition */}
+          <AnimatePresence>
+            {images.map((image, index) => (
+              index === currentImage && (
+                <motion.div
+                  key={image}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 2 }}
+                  className="absolute inset-0"
+                >
+                  <img
+                    src={image}
+                    alt="Taxi Service"
+                    className="w-full h-full object-cover" // Ensures image covers the container
+                  />
+                </motion.div>
+              )
+            ))}
+          </AnimatePresence>
+
+          {/* Content */}
+          <div className="relative z-10 text-center px-4 md:px-8 lg:px-16">
+            <motion.h1
+              className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-4 tracking-wide"
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              Ride with <span className="text-blue-400">Ease</span>, Ride with <span className="text-blue-400">Us</span>
+            </motion.h1>
+
+            <motion.h3
+              className="text-2xl md:text-3xl font-bold text-white mb-6"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.3 }}
+            >
+              Fast, Reliable & Safe Taxi Services
+            </motion.h3>
+
+            <motion.p
+              className="text-lg font-light text-gray-300 lg:text-xl mb-8"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 2 }}
-              className="absolute inset-0"
+              transition={{ duration: 1, delay: 0.6 }}
             >
-              <img
-                src={image}
-                alt="Taxi Service"
-                className="w-full h-full object-cover" // Ensures image covers the container
-              />
+              Whether it's a quick trip or a long ride, we are here to take you anywhere, anytime with utmost comfort.
+            </motion.p>
+
+            <motion.div
+              className="flex flex-col items-center"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.9 }}
+            >
+              <button
+                onClick={scrollToNextSection}
+                className="bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 px-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105"
+              >
+                Book Your Ride Now
+              </button>
+
+              {/* Animated taxi icon */}
+              <AnimatedTaxiIcon />
             </motion.div>
-          )
-        ))}
-      </AnimatePresence>
-
-      {/* Content */}
-      <div className="relative z-10 text-center px-4 md:px-8 lg:px-16">
-        <motion.h1
-          className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-4 tracking-wide"
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          Ride with <span className="text-blue-400">Ease</span>, Ride with <span className="text-blue-400">Us</span>
-        </motion.h1>
-
-        <motion.h3
-          className="text-2xl md:text-3xl font-bold text-white mb-6"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.3 }}
-        >
-          Fast, Reliable & Safe Taxi Services
-        </motion.h3>
-
-        <motion.p
-          className="text-lg font-light text-gray-300 lg:text-xl mb-8"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.6 }}
-        >
-          Whether it's a quick trip or a long ride, we are here to take you anywhere, anytime with utmost comfort.
-        </motion.p>
-
-        <motion.div
-          className="flex flex-col items-center"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.9 }}
-        >
-          <button
-            onClick={scrollToNextSection}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 px-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105"
-          >
-            Book Your Ride Now
-          </button>
-
-          {/* Animated taxi icon */}
-          <AnimatedTaxiIcon />
-        </motion.div>
-      </div>
+          </div>
+        </>
+      )}
     </section>
   );
 }
